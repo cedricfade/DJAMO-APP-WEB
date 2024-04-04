@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Play", sans-serif;
+}
+
+/* PAGE DE CONNEXION */
+
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap');
+.djamo-info{
+ 
+display: flex;
+justify-content: center;
+align-items: center !important;
+height: 100vh;
+background: rgb(4, 65, 146);
+}
+
+.carte-djamo{
+    rotate: 90deg;
+    position: absolute;
+    
+
+  }
+  .carte-djamo img{
+   width: 200px;
+    
+}
+
+.item-card{
+    position: relative;
+   
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+
+ 
+}
+
+.item-card .card-targ{
+   
+    height: 80px;
+    position: absolute;
+
+}
+.item-card .targ1{
+    float: left;
+    left: -14.9em;
+    top: -2em;
+    
+}
+.item-card .targ2{
+
+    top: -11.5em;
+    left: -1.5em;
+    animation-duration: 1s;
+
+}
+
+.item-card .targ3{
+    left: 10em;
+    top: -2.5em;
+    animation-duration: 3s;
+
+ 
+} 
+.titre-connexion{
+    position: absolute;
+    display: block;
+    bottom: 18em !important;
+    color: #fff;
+    font-weight: 900 !important;
+}
+
+.connexion-djamo{
+    justify-content: center;
+    align-content: center;
+   
+    height: 100vh;
+    margin: 0 auto;
+
+}
+
+form input{
+    border-radius:0 !important;
+   
+}
+form input:focus{
+    box-shadow: none !important;
+    border: 2px solid rgb(37, 94, 169) !important;
+}
+.btn-connexion{
+    background: rgb(4, 65, 146);
+    color: #fff;
+    padding: 8px 15px ;
+    transition: all 0.3s ease-in-out;
+    margin-top: 13px;
+    border: none;
+}
+.btn-connexion:hover{
+    background: #000;
+}
+
+/* PAGE VERIFICATION OTP*/
+.veficationOTP{
+justify-content: center;
+align-content: center;
+height: 100vh;
+width: 100%;
+margin: 0 auto;
+}
+
+.veficationOTP span{
+    color: #4c4c4c;
+    font-size: 15px; 
+    display: block;
+
+} 
+
+
+/* Connexion CODE PIN */
+
+div.connexionPin{
+
+
+}

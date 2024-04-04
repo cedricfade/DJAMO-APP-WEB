@@ -1,0 +1,66 @@
+body{
+ justify-content: center;
+ height: 100vh;
+ align-items: center;
+ margin: 0 auto;
+ display: flex;
+}
+.connexionPIN{
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  padding: 15px;
+  height: 100vh;
+
+  text-align: center;
+
+}
+.connexionPIN form{
+margin: 3em;
+}
+.keys input{
+
+
+   
+    border: 1.5px solid rgb(89, 89, 203) ;
+    border-radius: 5px !important;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    color: rgb(4, 4, 135);
+
+
+
+    font-size: 3em;
+
+}
+
+@media screen  and (max-width:999px) {
+    .keys input{
+        max-width: 15%;
+      height: 60px;
+      margin-bottom: 5px 
+    }
+}
+.keys input:focus{
+    outline: none;
+    border: 3px solid rgb(89, 89, 203) !important;
+    
+}
+.keys input:active{
+   
+}
+.reload{
+    color: rgb(8, 2, 6);
+    font-weight: bold;
+    cursor: pointer;
+
+}
+.forgetpass{
+    color: #474747;
+    text-decoration: none;
+    
+
+}
+

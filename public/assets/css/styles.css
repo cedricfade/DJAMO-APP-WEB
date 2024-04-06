@@ -1,13 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Play", sans-serif;
+    font-family: 'Play',sans-serif ;
+}
+
+body{
+    background: radial-gradient(70em, rgb(233, 226, 208), rgb(241, 241, 241));
 }
 
 /* PAGE DE CONNEXION */
 
-@import url('https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap');
+
 .djamo-info{
  
 display: flex;
@@ -15,6 +20,10 @@ justify-content: center;
 align-items: center !important;
 height: 100vh;
 background: rgb(4, 65, 146);
+clip-path: polygon(0 0, 80% 0, 98% 100%, 0 100%);
+/* transform: skewX(-10deg);  */
+
+
 }
 
 .carte-djamo{
@@ -84,11 +93,14 @@ background: rgb(4, 65, 146);
 
 form input{
     border-radius:0 !important;
-   
 }
 form input:focus{
     box-shadow: none !important;
     border: 2px solid rgb(37, 94, 169) !important;
+     border-left: none !important;
+     border-right: none !important;
+     border-top: none !important;
+
 }
 .btn-connexion{
     background: rgb(4, 65, 146);

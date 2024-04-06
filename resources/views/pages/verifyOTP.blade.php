@@ -51,7 +51,7 @@
                         <form action="{{ route('verifyOTPAction') }}" method="POST">
                             @csrf
                             <div class="form-floating mb-3 col-md-12 d-block">
-                                <input type="text" name="otp" class="form-control d-block" id="floatingInput" placeholder="name@example.com">
+                                <input type="text" id="otp" name="otp" class="form-control d-block" id="floatingInput" placeholder="name@example.com">
                                 <label for="floatingInput">Entrez code de vérification</label>
 
                                @if (Session::has('errorOTP'))
@@ -73,6 +73,26 @@
 
 
     <script src="{{asset('assets/js/bootstrap.bundle.js')}}"></script>
+
+    <script>
+        var inputElement  = document.getElementById('otp');
+
+            // Écoutez l'événement 'input' sur l'élément d'entrée
+        inputElement.addEventListener('input', function(event) {
+        // Récupérez la valeur de l'entrée
+        var inputValue = inputElement.value;
+            // Si la longueur de l'entrée est supérieure à 5, tronquez-la
+    if (inputValue.length > 5) {
+        inputValue = inputValue.slice(0, 5);
+    }
+
+        // Remplacez tous les caractères non numériques par une chaîne vide
+        var filteredValue = inputValue.replace(/\D/g, '');
+
+        // Mettez à jour la valeur de l'entrée avec la valeur filtrée
+        inputElement.value = filteredValue;
+        });
+    </script>
 
 
 </body>

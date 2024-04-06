@@ -43,6 +43,8 @@
              </div>
              <div class="col-xl-6 col-xl-6 col-md-6 col-lg-6" style="display: flex;">
                     <div class="connexion-djamo col-xl-8 col-md-8 col-lg-8 col-sm-8 col-12">
+                        
+                  
                         <h1 class="">Connectez-vous <br> <span style="font-weight: 900; color: rgb(10, 7, 196);text-shadow: 0  px rgb(12, 12, 15);">DJAMO</span></h1>
 
                         <form action="{{ route('loginAction') }}" method="post">
@@ -58,6 +60,10 @@
                               <button class="btn-connexion">Se connecter</button>
 
                         </form>
+                        <br>
+                        @if (Session::has('tentative'))
+                        <span class="bg-danger text-light p-2">{{ Session::get('tentative') }}</span>
+                        @endif
                     </div>
              </div>
 

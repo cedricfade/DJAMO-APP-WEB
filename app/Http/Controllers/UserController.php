@@ -83,12 +83,20 @@ use Illuminate\Support\Facades\Session;
              */
 
             if ($user) {
-
-                // L'e-mail existe, enregistrer l'utilisateur dans la session
+                //Si il a eu trop de tentative avec ce email on affiche un message d'erreur
+                if (!Session::has('loginAttempts')) {
+                   // L'e-mail existe, enregistrer l'utilisateur dans la session
                 Session::put('user', $user);
 
                 // L'e-mail existe, redirigez l'utilisateur vers la page de vérification du mot de passe
                 return redirect()->route('codePIN');
+                }
+                else{
+                    return redirect()->back()->with('tentative', 'Trop de tentative erronée, veuillez revenir plus tard.');
+                    
+                }
+
+                
             }
 
             else {
@@ -142,7 +150,7 @@ use Illuminate\Support\Facades\Session;
                 // Vérifier si le nombre de tentatives dépasse 3
                 if ($loginAttempts >= 3) {
                     // Rediriger l'utilisateur vers une page de blocage ou un autre emplacement approprié
-                    return redirect()->route('login');
+                    return redirect()->route('login')->with('tentative','Trop de tentative erronée, veuillez revenir plus tard.');
 
                 }
 
@@ -151,8 +159,8 @@ use Illuminate\Support\Facades\Session;
                     // Réinitialiser le nombre de tentatives après une connexion réussie
                     Session::forget('loginAttempts');
 
-                    // Placer votre logique de génération de code OTP et de redirection vers la vérification OTP ici
-                    // On génère un code OTP et on le stocke dans une session
+                   
+                    // On génère un code OTP et on le stock dans une session et le mot de passe 
                     $otp = OTPService::generateOTP($user);
                     Session::put('otp', $otp);
                     Session::put('pass',$pass);

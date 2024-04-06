@@ -138,7 +138,7 @@ input.forEach(inputs => {
 
  // Si tous les champs d'entrée sont remplis, soumettez automatiquement le formulaire
  if (allFilled) {
-  window.location.href = "index.html";
+  window.location.href = "LIEN";
  }
   });
 });

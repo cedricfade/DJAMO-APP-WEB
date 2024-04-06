@@ -51,8 +51,11 @@
                                 <input type="email" class="form-control d-block" id="floatingInput" placeholder="name@example.com" name="email">
                                 <label for="floatingInput">Entrez votre email</label>
 
-                                <button class="btn-connexion">Se connecter</button>
+                               @if (Session::has('errorEmail'))
+                               <span class="text-danger">{{ Session::get('errorEmail') }}</span>
+                               @endif
                               </div>
+                              <button class="btn-connexion">Se connecter</button>
 
                         </form>
                     </div>

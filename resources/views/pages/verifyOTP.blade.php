@@ -43,17 +43,22 @@
              <div class="col-xl-6 col-xl-6 col-md-6 col-lg-6" style="display: flex;">
                     <div class="veficationOTP col-xl-8 col-md-8 col-lg-8 col-sm-8 col-12">
                         <h1 class="d-block">Code de vérification</h1>
+                        {{ Session('otp') }}
 
-                        <span>Entrez le code envoyé à cedricfade55@gmail.com</span>
+                        <span>Entrez le code envoyé à <span style="text-transform:lowercase; font-weight: bold; display: inline;">`{{ Session('user')->email }}`</span></span>
 
 
-                        <form action="">
+                        <form action="{{ route('verifyOTPAction') }}" method="POST">
+                            @csrf
                             <div class="form-floating mb-3 col-md-12 d-block">
-                                <input type="email" class="form-control d-block" id="floatingInput" placeholder="name@example.com">
+                                <input type="text" name="otp" class="form-control d-block" id="floatingInput" placeholder="name@example.com">
                                 <label for="floatingInput">Entrez code de vérification</label>
 
-                                <button class="btn-connexion">Se connecter</button>
+                               @if (Session::has('errorOTP'))
+                                   <span class="text-danger">{{ Session::get('errorOTP') }}</span>
+                               @endif
                               </div>
+                              <button class="btn-connexion">Se connecter</button>
 
                         </form>
                     </div>

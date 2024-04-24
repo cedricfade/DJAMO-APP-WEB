@@ -11,7 +11,8 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
 </head>
-<body style="">
+<body>
+
 
 
     <section class="background">
@@ -43,8 +44,8 @@
              </div>
              <div class="col-xl-6 col-xl-6 col-md-6 col-lg-6" style="display: flex;">
                     <div class="connexion-djamo col-xl-8 col-md-8 col-lg-8 col-sm-8 col-12">
-                        
-                  
+
+
                         <h1 class="">Connectez-vous <br> <span style="font-weight: 900; color: rgb(10, 7, 196);text-shadow: 0  px rgb(12, 12, 15);">DJAMO</span></h1>
 
                         <form action="{{ route('loginAction') }}" method="post">

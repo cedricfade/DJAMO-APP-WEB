@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 
@@ -21,3 +22,9 @@ Route::post('/validateAccount',[UserController::class,'verifyOTPAction'])->name(
 /**
  * Dashboard
  */
+
+    Route::middleware(['auth'])->prefix('dashboard')->group(function () {
+        Route::get('/home', [DashboardController::class, 'home'])->name('dashboard.home');
+    });
+
+

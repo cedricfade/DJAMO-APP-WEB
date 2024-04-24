@@ -8,6 +8,7 @@ class OTPService
     {
         $counter = time() / 10; // Change every 30 seconds
         $otp = hash_hmac('sha1', $counter, $secret);
-        return substr($otp, -6); // Extract 6-digit code
+        $otpDigits = preg_replace('/\D/', '', $otp); // Retain only digits
+        return substr($otpDigits, -5); // Extract last 6 digits
     }
 }

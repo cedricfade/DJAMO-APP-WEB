@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Session;
          */
         public function login(){
             if (Auth::user()) {
-                return "DEJA CONNECTE";
+                return Redirect()->route('dashboard.home');
             }
             else
 
@@ -93,10 +93,10 @@ use Illuminate\Support\Facades\Session;
                 }
                 else{
                     return redirect()->back()->with('tentative', 'Trop de tentative erronée, veuillez revenir plus tard.');
-                    
+
                 }
 
-                
+
             }
 
             else {
@@ -111,7 +111,7 @@ use Illuminate\Support\Facades\Session;
 
         public function codepin(){
             if (Auth::user()) {
-                return 'DEJA CONNECTE';
+                return Redirect()->route('dashboard.home');
             }
             else{
                 if (!Session('user')) {
@@ -159,8 +159,8 @@ use Illuminate\Support\Facades\Session;
                     // Réinitialiser le nombre de tentatives après une connexion réussie
                     Session::forget('loginAttempts');
 
-                   
-                    // On génère un code OTP et on le stock dans une session et le mot de passe 
+
+                    // On génère un code OTP et on le stock dans une session et le mot de passe
                     $otp = OTPService::generateOTP($user);
                     Session::put('otp', $otp);
                     Session::put('pass',$pass);
@@ -195,7 +195,7 @@ use Illuminate\Support\Facades\Session;
         public function verifyOTP(){
 
         if (Auth::user()) {
-            return 'DEJA CONNECTE';
+            return Redirect()->route('dashboard.home');
         }
         else{
             if (!Session('pass')) {
@@ -221,7 +221,7 @@ use Illuminate\Support\Facades\Session;
         // Tentez de connecter l'utilisateur avec les informations fournies
             if (Auth::attempt(['email'=>$email, 'password'=>$pass])) {
         // Authentification réussie, redirigez l'utilisateur vers son tableau de bord
-                return "VALIDER";
+                     return Redirect()->route('dashboard.home');
             } else {
         // Authentification échouée, renvoyez un message d'erreur ou redirigez l'utilisateur vers une autre page
                 return redirect()->back();

@@ -37,10 +37,10 @@
                                     <img src="{{ asset('assets/images/profile.jpg') }}" alt="" class="side-img">
                                 </div>
                                 <div class="col-xl-9 col-lg-9 col-md-9">
-                                    <h3 style="text-transform: uppercase">{{ Auth::user()->nom }} {{ Auth::user()->prenom }}</h3>
-                                    <span>+225 0747221815</span>
+                                    <h3 style="text-transform: uppercase;">{{ Auth::user()->nom }} {{ Auth::user()->prenom }} </h3>
+                                    <span style="font-size: 14px">{{ Auth::user()->contact }}</span>
                                     <div class="info">
-                                        <span>Carte Virtuelle </span> .
+                                        <span>Carte Virtuelle </span>
                                         <a href="">Mon profil</a>
                                     </div>
                                 </div>
@@ -91,7 +91,7 @@
                 <div class="col-xl-1"></div>
 
                 <div class="col-xl-8">
-                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist" style="border: none !important">
                         <li class="nav-item" role="presentation">
                           <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Courant</button>
                         </li>
@@ -105,7 +105,7 @@
                           <button class="nav-link" id="disabled-tab" data-bs-toggle="tab" data-bs-target="#disabled-tab-pane" type="button" role="tab" aria-controls="disabled-tab-pane" aria-selected="false" disabled>Investir</button>
                         </li>
                       </ul>
-                      <div class="tab-content" id="myTabContent">
+                      <div class="tab-content" id="myTabContent" >
                         <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
                             <br><br>
                             <div class="container">
@@ -122,10 +122,40 @@
                                             <h2>455 FCFA</h2>
 
                                             <div class="deposity">
-                                                <h3>Deposer de l'argent</h3>
+                                                <a href="#">Deposer de l'argent</a>
                                             </div>
                                         </div>
                                     </div>
+                                </div>
+
+                                <div class="col-xl-6">
+                                   <div class="card card-option">
+                                    <div class="row">
+                                        <div class="col-xl-4 col-md-4 col-sm-4 col-4 icone">
+                                            <span class="iconeSend"><i class="fa-solid fa-arrow-right"></i></span>
+                                            <img src="{{ asset('assets/images/djamo.jpg') }}" alt="" style=" filter: invert(10);">
+                                            <label for="Djamo">Djamo</label>
+                                        </div>
+                                        <div class="col-xl-4 col-md-4 col-sm-4 col-4 icone">
+                                             <span class="iconeSend"><i class="fa-solid fa-arrow-right"></i></span>
+                                            <img src="{{ asset('assets/images/menu-icon-transfers.svg') }}" alt="" style=" ">
+                                            <label for="Djamo">Mobile Money</label>
+                                        </div>
+                                        <div class="col-xl-4 col-md-4 col-sm-4 col-4 icone">
+                                            <img src="{{ asset('assets/images/menu-icon-vault.svg') }}" alt="" style=" ;">
+                                            <label for="Djamo">Coffre</label>
+                                        </div>
+                                        <div class="col-xl-4 col-md-4 col-sm-4 col-4 icone">
+                                            <img src="{{ asset('assets/images/iban.png') }}" alt="" style=" ;">
+                                            <label for="Djamo">IBAN</label>
+                                        </div>
+                                        <div class="col-xl-4 col-md-4 col-sm-4 col-4 icone">
+                                            <img src="{{ asset('assets/images/abonnement.png') }}" alt="" style=" ;">
+                                            <label for="Djamo">Abonnements</label>
+                                        </div>
+                                    </div>
+
+                                   </div>
                                 </div>
                                </div>
                             </div>

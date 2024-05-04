@@ -191,7 +191,7 @@ div.connexionPin{
 
 .side-header h3{
     color: #fff;
-    font-size: 17px;
+    font-size: 16px;
     position: relative;
 }
 .side-header .info a{
@@ -205,7 +205,7 @@ font-size: 15px;
     background: #555;
     padding: 2px 7px;
     border-radius: 3px;
-    font-size: 15px;
+    font-size: 14px;
 
 }
 
@@ -312,7 +312,8 @@ font-size: 15px;
     background: #f8f7f7 !important;
     border-radius: 7px;
     margin:0 5px;
-    border: none !important;
+    border: 1px solid;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.329);
 
 }
 .nav-tabs li button{
@@ -327,31 +328,86 @@ font-size: 15px;
 }
 .card-solde{
     padding: 15px;
-    border-radius: 5px;
+    border-radius: 10px !important;
+}
+.card-solde .solde{
+   font-size: 18px;
 }
 
 .card-solde .heade{
-
+    font-weight: 200 !important;
     display: flex;
     justify-content: space-between;
 }
 
+.card-option{
+    padding-bottom: 7px;
+
+    justify-content: space-evenly;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px !important;
+}
+.card-option .icone{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 3px 0;
+}
+.card-option img{
+
+    width: 55px;
+    background: rgb(185, 188, 235);
+    text-align: center;
+    padding: 5px 6px ;
+    border-radius: 50px;
+
+}
+.card-option label{
+    font-size: 12px;
+    text-align: center;
+}
+
+.card-option .iconeSend{
+        position: relative;
+        float: right;
+        top: 15px;
+        z-index: 999;
+        left: 18px;
+        background: blue;
+        padding: 4px 7.5px;
+        color: #fff;
+        border-radius: 50%;
+        font-size: 11px;
+
+}
+
 .solde h2{
     font-weight: 900;
-    font-size: 2.99em !important;
+    font-size: 2em !important;
 
 }
 
 .deposity{
 
     text-align: center;
-    background: rgba(200, 200, 232, 0.831);
-    color: blue;
-    margin: 0 16px;
-    padding: 8px;
-    border-radius: 10px;
-    font-weight: 300;
+
+
+    padding-top: 1.3em;
+    padding-bottom: 1.3em;
+
+
+    cursor: pointer;
 }
-.deposity h3{
-    font-size: 1.6em;
+.deposity a{
+    background: rgba(200, 200, 232, 0.831);
+    font-size: 1.2em;
+    padding: 10px 68px;
+    font-weight: 300;
+    text-decoration: none;
+    color: blue;
+
+    border-radius: 10px;
 }

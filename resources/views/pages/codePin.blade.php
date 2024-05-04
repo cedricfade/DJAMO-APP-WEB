@@ -43,7 +43,7 @@
                     <h1 class="">Code de vérification</h1>
 
                     @if (Session::has('user'))
-                    <p style="font-weight: bold; font-size: 18px"><span style="font-style: italic; ">Hello</span>, <span style="color: rgb(51, 51, 207); font-weight: bold">{{ Session('user')->nom }} {{ Session('user')->prenom }}</span></p>
+                    <p style="font-weight: bold; font-size: 18px"><span style="font-style: italic; ">Hello</span>, <span style="color: rgb(51, 51, 207); font-weight: bold; text-transform: uppercase">{{ Session('user')->nom }} {{ Session('user')->prenom }}</span></p>
                     @endif
 
 

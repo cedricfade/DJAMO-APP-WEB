@@ -14,7 +14,7 @@
 <body>
     <style>
         body{
-            background:linear-gradient(15deg , #0e0e0e, #030f97b5)
+            background:linear-gradient(15deg , #000000, #2e2e2e)
         }
 
     </style>

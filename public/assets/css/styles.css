@@ -7,7 +7,8 @@
 }
 
 body{
-    background: radial-gradient(70em, rgb(245, 234, 208), rgb(241, 241, 241));
+    background: radial-gradient(90em, rgb(255, 255, 255), rgba(250, 224, 195, 0.815));
+
 }
 
 /* PAGE DE CONNEXION */
@@ -342,6 +343,7 @@ font-size: 15px;
 
 .card-option{
     padding-bottom: 7px;
+    background: rgb(255, 255, 255) !important;
 
     justify-content: space-evenly;
     display: flex;
@@ -410,4 +412,49 @@ font-size: 15px;
     color: blue;
 
     border-radius: 10px;
+}
+
+.card{
+    box-shadow: 1px 0 8px rgba(0, 0, 0, 0.329);
+
+}
+div.history{
+    margin-top: 2em;
+    padding: 10px;
+   
+}
+.history .title{
+    display: flex;
+
+    justify-content: space-between;
+}
+.history .title a{
+    font-size: 18px;
+    text-decoration: none;
+}
+.history-lists{
+    padding: 10px;
+}
+
+.history-lists .liste img{
+    display: block;
+    height: 50px;
+    border-radius: 50px;
+    position: ;
+}
+.liste .date ,.heure{
+   color: #494949;
+   font-weight: 300 !important;
+   font-size: 14px;
+}
+
+.liste-group{
+    margin-left: 5px;
+}
+
+.liste{
+    padding: 10px;
+    border-bottom: 1px solid #949494;
+    padding-bottom: 10px;
+    padding-top: 10px;
 }

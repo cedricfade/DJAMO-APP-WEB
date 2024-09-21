@@ -128,7 +128,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-xl-6">
+                                <div class="col-xl-4">
                                    <div class="card card-option">
                                     <div class="row">
                                         <div class="col-xl-4 col-md-4 col-sm-4 col-4 icone">
@@ -157,6 +157,97 @@
 
                                    </div>
                                 </div>
+
+
+                                {{-- Historique de transation --}}
+
+                                <div class="div.col-xl-12 col-md-12 col-lg-12 ">
+                                    <div class="history">
+                                        <div class="title">
+                                            <h3>Transactions</h3>
+                                            <a href="" class="all">Tout afficher</a>
+                                        </div>
+
+                                        <div class="card history-lists">
+
+                                            <div class="row">
+                                                <div class="col-xl-6">
+                                                    <div class="liste">
+                                                        <span class="date">Aujourd'hui</span>
+                                                    <div class="row" style="margin-top: 5px">
+                                                        <div class="col-xl-6" style="display: flex;">
+                                                            <img src="{{ asset('assets/images/djamo.jpg') }}" alt="">
+                                                            <div class="liste-group">
+                                                                <span class="reference">Transfert vers Djamo</span>
+                                                                 <br>
+                                                                 <span class="objet" style="background: rgba(235, 131, 33, 0.534); color: rgb(255, 45, 45); padding: 3px; border-radius: 2px; font-size: 13px">Coffre</span>
+                                                                 <br>
+                                                                <span class="heure">24:43</span>
+                                                            </div>
+                                                      
+                                                          
+                                                        
+                                                        </div>
+                                                           <div class="col-xl-6">
+                                                            <span class="somme" style="color: rgb(255, 45, 45)">5 000 FCFA</span>
+                                                           </div>
+                                                    </div>
+                                                    </div>
+                                                    <div class="liste">
+                                                        <span class="date">Aujourd'hui</span>
+                                                    <div class="row" style="margin-top: 5px">
+                                                        <div class="col-xl-6" style="display: flex;">
+                                                            <img src="{{ asset('assets/images/djamo.jpg') }}" alt="">
+                                                            <div class="liste-group">
+                                                                <span class="reference">De +2250747221815</span>
+                                                                 <br>
+                                                                 <span class="objet" style="background: rgba(182, 233, 147, 0.534); color: rgb(16, 90, 16); padding: 3px; border-radius: 2px; font-size: 13px">Dépôt</span>
+                                                                 <br>
+                                                                <span class="heure">08:55</span>
+                                                            </div>
+                                                      
+                                                          
+                                                        
+                                                        </div>
+                                                           <div class="col-xl-6">
+                                                            <span class="somme" style="color: rgb(45, 187, 99)">15 000 FCFA <i class="fa-solid fa-arrow-right" style="color: blue; padding: 5px; background: rgba(0, 78, 247, 0.301); border-radius: 50px"></i></span>
+                                                           </div>
+                                                    </div>
+                                                    </div>
+                                                    <div class="liste">
+                                                        <span class="date">Aujourd'hui</span>
+                                                    <div class="row" style="margin-top: 5px">
+                                                        <div class="col-xl-6" style="display: flex;">
+                                                            <img src="{{ asset('assets/images/djamo.jpg') }}" alt="">
+                                                            <div class="liste-group">
+                                                                <span class="reference">A vous même</span>
+                                                                 <br>
+                                                                 <span class="objet" style="background: rgba(182, 233, 147, 0.534); color: rgb(16, 90, 16); padding: 3px; border-radius: 2px; font-size: 13px">Mobile Money</span>
+                                                                 <br>
+                                                                <span class="heure">23:43</span>
+                                                            </div>
+                                                      
+                                                          
+                                                        
+                                                        </div>
+                                                           <div class="col-xl-6">
+                                                            <span class="somme" style="color: rgb(45, 187, 99)">22 000 FCFA</span>
+                                                           </div>
+                                                    </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-xl-6 col-md-6 col-lg-6 col-12 notify-list">
+                                                    <div class="container">
+                                                        <h2 style="text-align: right">Notification</h2>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                
                                </div>
                             </div>
                         </div>
